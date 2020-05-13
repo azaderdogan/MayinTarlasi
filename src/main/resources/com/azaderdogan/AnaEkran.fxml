@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.azaderdogan.AnaEkran">
+   <children>
+      <Pane fx:id="ustPane" prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <MenuBar>
+               <menus>
+                  <Menu mnemonicParsing="false" text="Oyun">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#yeniOyun" text="Yeni Oyun" />
+                        <MenuItem mnemonicParsing="false" onAction="#baslangicSeviyesi" text="Başlangıç Seviyesi" />
+                        <MenuItem mnemonicParsing="false" onAction="#normalSeviye" text="Normal Seviye" />
+                        <Menu mnemonicParsing="false" text="Özel oyun">
+                           <items>
+                              <MenuItem fx:id="alti" mnemonicParsing="false" onAction="#alti" text="6 X 6" />
+                              <MenuItem fx:id="sekiz" mnemonicParsing="false" onAction="#sekiz" text="8 X 8" />
+                              <MenuItem fx:id="oniki" mnemonicParsing="false" onAction="#oniki" text="12 X 12" />
+                              <MenuItem fx:id="yirmi" mnemonicParsing="false" onAction="#yirmi" text="20 X 20" />
+                              <MenuItem fx:id="yirmi4" mnemonicParsing="false" onAction="#yirmi4" text="24 X 24" />
+                              <MenuItem fx:id="yirmi5" mnemonicParsing="false" onAction="#yirmi5" text="25 X 25" />
+                              <MenuItem fx:id="otuz" mnemonicParsing="false" onAction="#otuz" text="30 X 30" />
+                           </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" onAction="#uzmanSeviyesi" text="Uzman Seviyesi" />
+                        <MenuItem mnemonicParsing="false" onAction="#oyundanCik" text="Oyundan Çık" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" onAction="#yardim" text="Yardım" />
+               </menus>
+            </MenuBar>
+            <Label fx:id="saat" layoutX="510.0" prefHeight="29.0" prefWidth="90.0" text="Oyun saati" textFill="#e10c0c" />
+            <Label fx:id="skor" layoutX="139.0" layoutY="2.0" prefHeight="29.0" prefWidth="107.0" text="Skor:" />
+            <ImageView fitHeight="29.0" fitWidth="27.0" layoutX="287.0" layoutY="4.0" onMouseClicked="#yeniOyun" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../download.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneOyunAlani" layoutY="30.0" prefHeight="600.0" prefWidth="600.0" />
+   </children>
+</AnchorPane>
